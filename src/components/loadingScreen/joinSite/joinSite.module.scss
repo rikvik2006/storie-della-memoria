@@ -1,0 +1,26 @@
+.joinSiteButton {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-EB-garamond);
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    position: absolute;
+    color: var(--foreground);
+    bottom: 20px; /* Puoi modificare la distanza dal basso */
+    left: 50%;
+    transform: translateX(-50%); /* Centrato orizzontalmente */
+    padding: 10px 20px;
+
+    .arrow {
+        transform: translateY(2px);
+    }
+
+    .timer {
+        margin-right: 0.5rem;
+    }
+}

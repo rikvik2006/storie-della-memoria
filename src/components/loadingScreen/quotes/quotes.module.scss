@@ -1,0 +1,32 @@
+.quoteContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    font-family: var(--font-EB-garamond);
+    font-size: 1.25rem;
+    position: relative;
+
+    .quoteAuthor {
+        font-family: var(--font-EB-garamond);
+        font-size: 1rem;
+        color: var(--accent-ocra);
+    }
+}
+
+.quoteStart {
+    font-family: var(--font-EB-garamond);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-red);
+    align-self: flex-start;
+    transform: translateY(-0.8rem);
+}

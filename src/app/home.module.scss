@@ -1,0 +1,33 @@
+.loadingScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    z-index: 1000;
+    transition: opacity 1.5s ease-out;
+}
+
+.fadeOut {
+    opacity: 0; /* Fa diventare trasparente il componente */
+}
+
+.randomQuote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homePage {
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+}
+
+.fadeIn {
+    opacity: 1; /* Fa diventare opaco il componente */
+}
