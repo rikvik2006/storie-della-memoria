@@ -30,3 +30,8 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+// Remove the error overlay
+nextjs-portal {
+    display: none;
+}

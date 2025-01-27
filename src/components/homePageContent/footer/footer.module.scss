@@ -1,0 +1,17 @@
+.footer {
+    font-family: var(--font-cinzel);
+    margin-bottom: 1rem;
+
+    a {
+        color: var(--accent-ocra);
+        text-decoration: none;
+    }
+
+    .author {
+        text-decoration: underline wavy #c69c6d9f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+    }
+}

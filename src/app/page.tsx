@@ -8,6 +8,7 @@ import HomePageContent from "@/components/homePageContent/homePageContent";
 import { CharachterStories } from "@/utils/charachters";
 import CharactherComponent from "@/components/homePageContent/characther/characther";
 import Testimonials from "@/components/homePageContent/testimonials/testimonials";
+import Footer from "@/components/homePageContent/footer/footer";
 
 const HomePage = () => {
     const [showLoding, setShowLoading] = useState<boolean>(true);
@@ -87,7 +88,18 @@ const HomePage = () => {
                     />
                     <div></div>
                     <CharactherComponent charachter={charachter} />
+                    <img
+                        className={styles.barbedWireHr}
+                        src="/img/filo_spinato.png"
+                        alt=""
+                    />
                     <Testimonials testimonial={testimonial} />
+                    <img
+                        className={styles.barbedWireHr}
+                        src="/img/filo_spinato.png"
+                        alt=""
+                    />
+                    <Footer />
                 </div>
             )}
         </div>
