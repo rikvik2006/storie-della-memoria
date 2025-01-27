@@ -5,13 +5,21 @@ import styles from "./home.module.scss";
 import JoinSite from "@/components/loadingScreen/joinSite/joinSite";
 import { useEffect, useState } from "react";
 import HomePageContent from "@/components/homePageContent/homePageContent";
+import { CharachterStories } from "@/utils/charachters";
+import CharactherComponent from "@/components/homePageContent/characther/characther";
+import Testimonials from "@/components/homePageContent/testimonials/testimonials";
 
 const HomePage = () => {
     const [showLoding, setShowLoading] = useState<boolean>(true);
     const [isFadingOut, setIsFadingOut] = useState<boolean>(false);
     const [isFadingIn, setIsFadingIn] = useState<boolean>(false);
 
-    const loadingTimeout = 5000;
+    const [charachter, setCharachter] = useState<CharachterStories | null>(
+        null
+    );
+    const [testimonial, setTestimonial] = useState<string | null>(null);
+
+    const loadingTimeout = 7000;
     const fadeOutTimeout = 1500;
     const fadeInTimeout = 1500;
 
@@ -43,6 +51,14 @@ const HomePage = () => {
         }, fadeOutTimeout);
     };
 
+    const handleCharacterFromChild = (charachters: CharachterStories) => {
+        setCharachter(charachters);
+    };
+
+    const handleTestimonialFromChild = (testimonial: string) => {
+        setTestimonial(testimonial);
+    };
+
     return (
         <div className={styles.wrapper}>
             {showLoding ? (
@@ -65,11 +81,17 @@ const HomePage = () => {
                         isFadingIn ? styles.fadeIn : ""
                     }`}
                 >
-                    <HomePage />
+                    <HomePageContent
+                        sendDataToParent={handleCharacterFromChild}
+                        sendTestimonialToParent={handleTestimonialFromChild}
+                    />
+                    <div></div>
+                    <CharactherComponent charachter={charachter} />
+                    <Testimonials testimonial={testimonial} />
                 </div>
             )}
         </div>
     );
 };
 
-export default HomePageContent;
+export default HomePage;
